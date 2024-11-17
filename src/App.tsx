@@ -1,3 +1,11 @@
+import Goals from "./components/Goals.tsx";
+
 export default function App() {
-  return <h1>Let's get started!</h1>;
+  return (
+    <main>
+      <Goals
+        title={'Title'}
+        description={'Description'} />
+    </main>
+  )
 }
