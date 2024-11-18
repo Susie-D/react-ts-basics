@@ -3,14 +3,16 @@ import GoalsList from "./GoalsList";
 
 interface Props {
     goals: Goal[];
+    onDeleteGoal: (id: number) => void;
 }
 
 const Goals = ({
-    goals
+    goals,
+    onDeleteGoal,
 }: Props) => {
     return (
         <article>
-            <GoalsList goals={goals} />
+            <GoalsList goals={goals} onDelete={onDeleteGoal}/>
         </article>
     )
 }
