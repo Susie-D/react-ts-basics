@@ -1,19 +1,16 @@
+import { Goal } from "../App";
+import GoalsList from "./GoalsList";
+
 interface Props {
-    title: string;
-    description: string;
+    goals: Goal[];
 }
 
 const Goals = ({
-    title,
-    description,
+    goals
 }: Props) => {
     return (
         <article>
-            <div>
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </div>
-            <button>DELETE</button>
+            <GoalsList goals={goals} />
         </article>
     )
 }
