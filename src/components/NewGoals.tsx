@@ -16,6 +16,7 @@ const NewGoal = ({ onAddGoal }: Props) => {
         const enteredSummary = summary.current!.value;
 
         onAddGoal(enteredGoal, enteredSummary);
+        event.currentTarget.reset();
     }
     return (
         <form onSubmit={handleSubmit}>
